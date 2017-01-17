@@ -1,0 +1,2 @@
+class ClassAttendee < ApplicationRecord
+end

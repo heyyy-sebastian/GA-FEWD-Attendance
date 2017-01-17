@@ -1,0 +1,2 @@
+module ClassAttendeesHelper
+end
