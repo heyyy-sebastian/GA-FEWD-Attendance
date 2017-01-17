@@ -1,2 +1,11 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="password-box">
+<h1>Hello.</h1>
+<p>Please enter today's password below.</p>
+<%= form_tag '/enter' do %>
+      <h5> Password </h5> <%= password_field_tag %>
+
+      <div class="login-btn">
+        <%= submit_tag "Enter" %>
+       </div>
+<%end%>
+</div>

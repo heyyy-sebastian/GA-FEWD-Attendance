@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     else
     # Add notice for invalid password
     # If user's login doesn't work, send them back to the login form.
-      redirect_to '/login'
+      redirect_to '/enter'
 
     end
   end

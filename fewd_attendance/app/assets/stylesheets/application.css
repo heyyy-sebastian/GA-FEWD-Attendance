@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+ body{
+ 	margin: 0;
+ }
+
+.nav-bar {
+	background-color: #000;
+	color: #fff;
+	margin: 0;
+	padding: 1rem 1.5rem;
+}
+
+.nav-bar h1 {
+	text-transform: uppercase;
+	font-family: Helvetica, sans-serif;
+	font-size: 2rem;
+	line-height: 100%;
+	margin: .5rem;
+}
+
+.nav-bar h2 {
+	font-family: Georgia, serif;
+	font-weight: lighter;
+	font-size: 1.5rem;
+}
+
+.password-box{
+	margin: 1.5rem auto;
+	height: 300px;
+	width: 300px;
+	font-family: Georgia, serif;
+	border: 2px solid #efefef;
+	text-indent: 1rem;
+}
+
+input {
+	text-indent: 1rem;
+}
