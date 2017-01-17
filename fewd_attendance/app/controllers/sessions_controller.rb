@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_id(params[:user_id])
+    user = User.exists?(params[:user_id])
     # If the user exists AND the password entered is correct.
     if user && user.authenticate(params[:password])
       # Save the user id inside the browser cookie. This is how we keep the user
@@ -11,8 +11,10 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/classes'
     else
+    # Add notice for invalid password
     # If user's login doesn't work, send them back to the login form.
       redirect_to '/login'
+
     end
   end
 
