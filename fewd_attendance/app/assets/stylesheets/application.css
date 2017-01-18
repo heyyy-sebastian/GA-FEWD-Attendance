@@ -17,14 +17,14 @@
  	margin: 0;
  }
 
-.nav-bar {
+nav, footer {
 	background-color: #000;
 	color: #fff;
 	margin: 0;
-	padding: 1rem 1.5rem;
+	padding: 1rem 1.5rem .5rem;
 }
 
-.nav-bar h1 {
+nav h1 {
 	text-transform: uppercase;
 	font-family: Helvetica, sans-serif;
 	font-size: 2rem;
@@ -32,21 +32,51 @@
 	margin: .5rem;
 }
 
-.nav-bar h2 {
+nav h2 {
 	font-family: Georgia, serif;
 	font-weight: lighter;
 	font-size: 1.5rem;
 }
 
 .password-box{
-	margin: 1.5rem auto;
+	margin: 8% auto;
 	height: 300px;
 	width: 300px;
 	font-family: Georgia, serif;
-	border: 2px solid #efefef;
+	border: 2px solid #000;
 	text-indent: 1rem;
 }
 
-input {
-	text-indent: 1rem;
+.login-btn { 	
+	margin: 1rem 1rem .03rem;
+  	padding: 13px 32px;
+  	padding: .8125rem 2rem;
+    border: 0;
+    font-family: Circular,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    font-size: 1.125rem;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #fa4542;
+    box-shadow: 0 3px 0 0 #a20101;
+    text-decoration: none;
+}
+
+footer{
+	position: fixed;
+	z-index: 999;
+	bottom: -1px;
+	width: 100%;
+	font-family: Georgia, serif;
+	font-size: 1.2rem;
+	letter-spacing: .08rem;
+}
+
+footer a {
+	text-decoration: none;
+	color: #e6e6e6;
 }
