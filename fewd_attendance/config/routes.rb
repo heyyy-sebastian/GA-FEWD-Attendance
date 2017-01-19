@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
 
-  get 'class_attendees/new'
+  get '/class-attendance', to: 'class_attendees#new'
   #add class attendee info to the db
   post '/add_student', to: 'class_attendees#create'
 
