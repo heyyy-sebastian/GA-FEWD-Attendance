@@ -42,7 +42,7 @@ nav h2 {
 	font-size: 1.5rem;
 }
 
-.password-box{
+.password-box, .add-student-box {
 	margin: 8% auto;
 	height: 250px;
 	width: 300px;
@@ -51,7 +51,7 @@ nav h2 {
 	text-indent: 1rem;
 }
 
-input[type=password] {
+input[type=password], input[type=text] {
 	width: 87%;
 	height: 2rem;
 }
@@ -74,6 +74,16 @@ input[type=password] {
     background-color: #fa4542;
     box-shadow: 0 3px 0 0 #a20101;
     text-decoration: none;
+}
+
+.add-student-box {
+	height: 300px;
+	padding: 1rem;
+}
+
+.add-student-box h1, p {
+	text-indent: 0;
+	padding: 0 1rem;
 }
 
 footer{

@@ -1,2 +1,14 @@
-<h1>ClassAttendees#new</h1>
-<p>Find me in app/views/class_attendees/new.html.erb</p>
+<div class="add-student-box">
+<h1>Welcome to FEWD!</h1>
+<p>Please type your name in the box below for attendance.</p>
+<%= form_tag '/add_student' do %>
+   	<%= text_field_tag :name %>
+   	<%= submit_tag("Submit", :class => "login-btn") %>
+<%end%>	
+</div>
+
+<div class="todays-attendance">
+</div>
+
+<div class="past-classes">
+</div>
