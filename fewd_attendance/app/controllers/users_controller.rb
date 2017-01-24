@@ -9,11 +9,11 @@ class UsersController < ApplicationController
   def create
      @user = User.new(user_params)
     if @user.save
-    redirect_to '/enter'
-    puts "User created & saved to db"
+    	redirect_to '/enter'
+    	puts "User created & saved to db"
     else
-    redirect_to '/enter'
-    puts "User not saved"
+    	redirect_to '/enter'
+    	puts "User not saved"
     end
   end
 

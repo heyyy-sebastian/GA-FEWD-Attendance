@@ -8,6 +8,14 @@
 </div>
 
 <div class="todays-attendance">
+<h1>Who's here?</h1>
+<% if @student %>
+	<% @student.each do%>
+	<ul>
+		<li><%= @student.name %></li>
+	</ul>
+	<%end%>
+<%end%>
 </div>
 
 <div class="past-classes">
