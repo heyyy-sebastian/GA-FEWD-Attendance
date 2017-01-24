@@ -5,11 +5,18 @@ class ClassAttendeesController < ApplicationController
   end
 
 #add a new student to the Class Attendees table
-  def add_student
+  def create
+  	puts student_params
   	@student = ClassAttendee.new(student_params)
   	if @student.save
+  		puts student was saved
   		render '/class-attendance'
-  		puts @student
+  	end
+  end
+
+  def all_students
+  	ClassAttendee.find_each do |student|
+  		puts student.name
   	end
   end
 
