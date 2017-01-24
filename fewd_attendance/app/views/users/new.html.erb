@@ -1,2 +1,24 @@
 <h1>Users#new</h1>
 <p>Find me in app/views/users/new.html.erb</p>
+<div class="sign-up-div">
+    <%= form_for @user, url: '/users' do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+​
+    <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f|%>
+      <h4>Sign Up</h4>
+      <h5> Password </h5> <%= f.password_field :password%>
+
+      <div class="login-btn">
+        <%= f.submit :Signup %>
+      </div>
+    <% end %>
+    <%end%>

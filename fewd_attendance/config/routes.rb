@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post '/add_student', to: 'class_attendees#create'
 
   get 'users/new'
+  post '/users', to: 'users#create'
 
   root to: 'sessions#new'
 
