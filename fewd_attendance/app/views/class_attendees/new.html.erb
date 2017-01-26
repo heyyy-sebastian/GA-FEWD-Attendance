@@ -1,12 +1,14 @@
+<%# add in sessions if/else here%>
 <div class="add-student-box">
 <h1>Welcome to FEWD!</h1>
 <p>Please type your name in the box below for attendance.</p>
 <%= form_tag('/add_student') do %>
-   	<%= text_field_tag :name %>
+   	<%= text_field(:name, :name) %>
    	<%= submit_tag("Submit", :class => "login-btn") %>
-<%end%>	
+<%end%>
 </div>
 
+<!--
 <div class="todays-attendance">
 <h1>Who's here?</h1>
 <% if ClassAttendee.exists? %>
@@ -22,3 +24,4 @@
 
 <div class="past-classes">
 </div>
+-->
