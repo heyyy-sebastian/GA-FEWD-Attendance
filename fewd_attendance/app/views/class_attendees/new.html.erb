@@ -2,8 +2,8 @@
 <div class="add-student-box">
 <h1>Welcome to FEWD!</h1>
 <p>Please type your name in the box below for attendance.</p>
-<%= form_tag('/add_student') do %>
-   	<%= text_field(:name, :name) %>
+<%= form_tag('/class-attendance') do %>
+   	<%= text_field(:name) %>
    	<%= submit_tag("Submit", :class => "login-btn") %>
 <%end%>
 </div>
@@ -13,6 +13,7 @@
 <h1>Who's here?</h1>
 <% if ClassAttendee.exists? %>
 	<p>No one's here yet.</p>
+  <%= @students %>
 	<% else %>
 	<%# ClassAttendee.each do%>
 	<ul>

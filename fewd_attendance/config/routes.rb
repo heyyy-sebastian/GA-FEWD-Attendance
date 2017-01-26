@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/class-attendance', to: 'class_attendees#new'
   #add class attendee info to the db
-  post '/add_student', to: 'class_attendees#create'
+  post '/class-attendance', to: 'class_attendees#create'
 
   get 'users/new'
   post '/users', to: 'users#create'

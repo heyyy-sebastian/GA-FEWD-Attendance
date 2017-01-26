@@ -1,5 +1,5 @@
 class ClassAttendeesController < ApplicationController
- #this will hopefully eliminate the no template error?
+
  def index
   @students = ClassAttendee.all
  end
@@ -15,9 +15,11 @@ class ClassAttendeesController < ApplicationController
   	@student = ClassAttendee.new(student_params)
   	if @student.save
   		puts "student was saved"
-  		redirect_to '/class-attendance'
+  		render '/class-attendance'
+      display resource, :status => created
     else
       puts "not saved :("
+      redirect_to '/class-attendance'
   	end
   end
 
