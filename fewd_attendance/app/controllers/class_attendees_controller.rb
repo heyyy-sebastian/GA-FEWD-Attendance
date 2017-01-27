@@ -16,25 +16,22 @@ class ClassAttendeesController < ApplicationController
   	if @student.save
   		puts "student was saved"
   		render '/class-attendance'
-      display resource, :status => created
     else
       puts "not saved :("
       redirect_to '/class-attendance'
   	end
   end
 
-  def all_students
-  	ClassAttendee.find_each do |student|
-  		puts student.name
-  	end
-  end
+  #def all_students
+  #	ClassAttendee.find_each do |student|
+  #		puts student.name
+  #	end
+  #end
 
   private
   	def student_params
-      #if I don't use permit and require, Rails throws a forbidden
-      #attributes error
   		params
-  		.require(:name)
-      .permit(:name)
+      .require(:name).permit(:name).to_h
+      byebug
   	end
 end #end ClassAttendees class definition

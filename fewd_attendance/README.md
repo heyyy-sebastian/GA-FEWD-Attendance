@@ -1,4 +1,9 @@
 #DAILY NOTES
+##Notes from 1/28
+OH OK: http://eileencodes.com/posts/actioncontroller-parameters-now-returns-an-object-instead-of-a-hash/
+So I've been creating an object not a hash with my parameters 
+Which also happens to be nil anyway upon further testing 
+
 ##Notes from 1/26
 Parameters aren't quite working -- currently getting an error where I have the "wrong number of arguments" for the name field on my form. I've tried a few different things, mainly resulting in 
 getting a 204 no content error and a "not saved :(" notification from my creat method.
