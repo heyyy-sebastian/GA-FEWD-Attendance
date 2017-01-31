@@ -30,7 +30,6 @@ class ClassAttendeesController < ApplicationController
 
   private
   	def student_params
-  		params
-      .require(:name).to_h
+  		params.permit!
   	end
 end #end ClassAttendees class definition
