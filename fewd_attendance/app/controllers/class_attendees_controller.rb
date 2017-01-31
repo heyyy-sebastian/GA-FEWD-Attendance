@@ -31,7 +31,6 @@ class ClassAttendeesController < ApplicationController
   private
   	def student_params
   		params
-      .require(:name).permit(:name).to_h
-      byebug
+      .require(:name).to_h
   	end
 end #end ClassAttendees class definition

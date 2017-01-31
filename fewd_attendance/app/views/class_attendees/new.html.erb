@@ -2,9 +2,9 @@
 <div class="add-student-box">
 <h1>Welcome to FEWD!</h1>
 <p>Please type your name in the box below for attendance.</p>
-<%= form_for class_attendance_path do |f| %>
+<%= form_for :ClassAttendee do |f| %>
    	<%= f.text_field :name %>
-   	<%= f.submit :class => "login-btn" %>
+   	<%= submit_tag("Submit", :class => "login-btn") %>
 <%end%>
 </div>
 
