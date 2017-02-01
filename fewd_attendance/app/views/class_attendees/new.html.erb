@@ -1,4 +1,5 @@
-<%# add in sessions if/else here%>
+<% if current_user %>
+
 <div class="add-student-box">
 <h1>Welcome to FEWD!</h1>
 <p>Please type your name in the box below for attendance.</p>
@@ -8,21 +9,19 @@
 <%end%>
 </div>
 
-<!--
+
 <div class="todays-attendance">
 <h1>Who's here?</h1>
-<%# if ClassAttendee.exists? %>
+<% if ClassAttendee.exists? %>
+  	<p> <%= @class_attendee %> </p>
+<% else %>
 	<p>No one's here yet.</p>
-  <%= @students %>
-	<%# else %>
-	<%# ClassAttendee.each do%>
-	<ul>
-		<li><%#= ClassAttendee.name %></li>
-	</ul>
-	<%#end%>
-<%#end%>
+<%end%>
 </div>
 
 <div class="past-classes">
 </div>
--->
+
+<% else %>
+	<%= link_to 'Sign in', '/enter' %>
+<% end %>

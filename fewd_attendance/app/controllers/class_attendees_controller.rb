@@ -24,12 +24,6 @@ class ClassAttendeesController < ApplicationController
     # This just reloads the page since the routes are set up weird
   end
 
-  #def all_students
-  #	ClassAttendee.find_each do |student|
-  #		puts student.name
-  #	end
-  #end
-
   private
 
   def class_attendee_params
