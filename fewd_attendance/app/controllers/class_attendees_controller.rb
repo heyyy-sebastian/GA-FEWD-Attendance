@@ -1,25 +1,27 @@
 class ClassAttendeesController < ApplicationController
-
- def index
-  @students = ClassAttendee.all
- end
-
- #initialize an empty object for student creation method
-  def new
-  	@student = ClassAttendee.new
+  def index
+    @class_attendees = ClassAttendee.all
   end
 
-#add a new student to the Class Attendees table
+   #initialize an empty object for student creation method
+  def new
+    @class_attendee = ClassAttendee.new
+  end
+
+  #add a new student to the Class Attendees table
   def create
-  	puts student_params
-  	@student = ClassAttendee.new(student_params)
-  	if @student.save
-  		puts "student was saved"
-  		render '/class-attendance'
+    @class_attendee = ClassAttendee.new(class_attendee_params)
+
+    if @class_attendee.save
+      puts "student was saved"
     else
+      # You should probably create an error flash here
+      # The puts statement will only be visible in the server log
       puts "not saved :("
-      redirect_to '/class-attendance'
-  	end
+    end
+
+    redirect_to '/class-attendance'
+    # This just reloads the page since the routes are set up weird
   end
 
   #def all_students
@@ -29,7 +31,10 @@ class ClassAttendeesController < ApplicationController
   #end
 
   private
-  	def student_params
-  		params.permit!
-  	end
-end #end ClassAttendees class definition
+
+  def class_attendee_params
+    params
+      .require(:class_attendee)
+      .permit(:name)
+  end
+end
