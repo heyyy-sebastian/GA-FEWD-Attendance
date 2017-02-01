@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  */
- body{
+ /* GLOBAL RESETS */
+
+body{
  	margin: 0;
  }
 
+/* HEADER AND FOOTER */
 nav, footer {
 	background-color: #000;
 	color: #fff;
@@ -28,7 +31,7 @@ nav, footer {
 	background-image: url('GAlogo.png');
 }
 
-nav h1 {
+nav h1, .todays-attendance h1, .past-classes h1 {
 	text-transform: uppercase;
 	font-family: Helvetica, sans-serif;
 	font-size: 2rem;
@@ -42,8 +45,10 @@ nav h2 {
 	font-size: 1.5rem;
 }
 
+/* LOGIN and NAME SUBMISSION BOXES */
+
 .password-box, .add-student-box {
-	margin: 8% auto;
+	margin: 3% auto;
 	height: 250px;
 	width: 300px;
 	font-family: Georgia, serif;
@@ -76,6 +81,8 @@ input[type=password], input[type=text] {
     text-decoration: none;
 }
 
+/* NAME SUBMISSION BOX FOR ATTENDANCE */
+
 .add-student-box {
 	height: 300px;
 	padding: 1rem;
@@ -85,6 +92,34 @@ input[type=password], input[type=text] {
 	text-indent: 0;
 	padding: 0 1rem;
 }
+
+/* WHO'S HERE */
+.attendance-container-div{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.todays-attendance, .past-classes {
+	width: 30%;
+	font-family: Georgia, serif;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 auto;
+	padding: 0 3rem;
+}
+
+/* PAST CLASSES */
+.past-classes {
+	
+}
+
+/* REDIRECT MSG if not logged in */
+.login-redirect-msg {
+
+}
+
+/* FOOTER */
 
 footer{
 	position: fixed;

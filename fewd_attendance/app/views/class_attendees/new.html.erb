@@ -9,7 +9,7 @@
 <%end%>
 </div>
 
-
+<div class="attendance-container-div">
 <div class="todays-attendance">
 <h1>Who's here?</h1>
 <% if ClassAttendee.exists? %>
@@ -20,8 +20,13 @@
 </div>
 
 <div class="past-classes">
+<h1>Past Classes</h1>
+</div>
+
 </div>
 
 <% else %>
-	<%= link_to 'Sign in', '/enter' %>
+	<p class="login-redirect-msg">
+	<%= link_to "You must enter today's password for attendance", '/enter' %>
+	</p>
 <% end %>
