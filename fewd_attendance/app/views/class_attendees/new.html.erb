@@ -12,8 +12,10 @@
 <div class="attendance-container-div">
 <div class="todays-attendance">
 <h1>Who's here?</h1>
-<% if ClassAttendee.exists? %>
-  	<p> <%= @class_attendee %> </p>
+<% if @class_attendees.exists? %>
+  	<% @class_attendees.each do |student| %>
+  	<p> <%= student['name'] %> </p>
+  	<% end %>
 <% else %>
 	<p>No one's here yet.</p>
 <%end%>

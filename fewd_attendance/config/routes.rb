@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #logout
   get '/logout', to: 'sessions#destroy'
 
-  resource :class_attendees, only: [:create]
+  resource :class_attendees, only: [:create, :index]
   get '/class-attendance', to: 'class_attendees#new'
 
   get 'users/new'

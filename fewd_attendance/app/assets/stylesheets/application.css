@@ -48,7 +48,7 @@ nav h2 {
 /* LOGIN and NAME SUBMISSION BOXES */
 
 .password-box, .add-student-box {
-	margin: 3% auto;
+	margin: 3% auto 10%;
 	height: 250px;
 	width: 300px;
 	font-family: Georgia, serif;
@@ -84,6 +84,7 @@ input[type=password], input[type=text] {
 /* NAME SUBMISSION BOX FOR ATTENDANCE */
 
 .add-student-box {
+	margin: 3% auto;
 	height: 300px;
 	padding: 1rem;
 }
@@ -96,18 +97,21 @@ input[type=password], input[type=text] {
 /* WHO'S HERE */
 .attendance-container-div{
 	width: 70%;
-	margin: 0 auto;
+	margin: 5% auto;
 	text-align: center;
 }
 
 .todays-attendance, .past-classes {
-	width: 30%;
+	width: 35%;
 	font-family: Georgia, serif;
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 auto;
 	padding: 0 3rem;
+	text-align: left;
 }
+
+
 
 /* PAST CLASSES */
 .past-classes {
@@ -122,7 +126,6 @@ input[type=password], input[type=text] {
 /* FOOTER */
 
 footer{
-	position: fixed;
 	z-index: 999;
 	bottom: -1px;
 	width: 100%;
