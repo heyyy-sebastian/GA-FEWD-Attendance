@@ -1,4 +1,12 @@
 #DAILY NOTES
+##Notes from 2/03
+Bryan helped me with a PR earlier this week to sort out the mess I made out of my strong params. 
+Here are two tutorials I'm reading to incorporate React into the class attendance page:
+[https://rlafranchi.github.io/2016/04/11/reactjs-and-rails/]
+[https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/]
+
+I need to research sorting/grouping/vetting submissions by date. So far I was able to make a string out of the Time.now object, which I'm thinking I can match to a spliced array.to_s out of the created_at column, but that doesn't really account for how I'm going to sort past classes. Maybe I can rely on the props from the react compenents?
+
 ##Notes from 1/28
 OH OK: http://eileencodes.com/posts/actioncontroller-parameters-now-returns-an-object-instead-of-a-hash/
 So I've been creating an object not a hash with my parameters 
