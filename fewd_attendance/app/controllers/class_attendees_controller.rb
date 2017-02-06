@@ -4,6 +4,7 @@ class ClassAttendeesController < ApplicationController
   def new
     @class_attendee = ClassAttendee.new  
     @class_attendees = ClassAttendee.all
+    render component: 'classAttendees', props: {class_attendees: @class_attendees}
   end
 
   #add a new student to the Class Attendees table
